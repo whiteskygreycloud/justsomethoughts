@@ -15,39 +15,47 @@
       margin: 0;
       padding: 20px;
       text-align: center;
-      background: linear-gradient(135deg, indigo, plum);
+      background: linear-gradient(135deg, plum, violet, indigo);
+      background-blend-mode: multiply; /* dims the gradient */
+      color: #fff;
 
-      /* Custom cursor using your provided PNG, resized for mouse use */
+      /* Cursor using your provided PNG, hotspot set at top-left */
       cursor: url('https://i.ibb.co/MySp4LMC/4440-C5-E2-47-F8-4-B70-B136-8-C373-D2-F5332.png') 0 0, auto;
     }
 
     h1 {
-      color: white;
       font-family: 'Gloria Hallelujah', cursive;
       font-size: 3em;
-      text-shadow: 0 0 10px white, 0 0 20px violet;
+      color: white;
+      text-shadow: 0 0 10px white, 0 0 20px violet, 0 0 30px indigo;
       margin-top: 0.5em;
     }
 
     p {
       font-family: "Times New Roman", serif;
       font-size: 1.1em; /* smaller */
-      color: #f0f0f0;
+      color: #f0f0f0; /* clear, no neon */
       margin: 0.5em 0;
     }
 
+    .neon {
+      font-size: 1.3em;
+      text-shadow: 0 0 10px #fff, 0 0 20px violet, 0 0 30px indigo;
+    }
+
     footer {
-      margin-top: 50px;
+      margin-top: 60px;
       font-size: 1.4em; /* bigger */
       font-family: Arial, sans-serif;
-      color: rgba(255, 0, 0, 0.7);
-      text-shadow: 0 0 5px red;
+      color: rgba(255, 0, 0, 0.8); /* dimmed red */
+      text-shadow: 0 0 10px red, 0 0 20px darkred;
     }
   </style>
 </head>
 <body>
   <h1>Sketchbook Title</h1>
   <p>Main text goes here, smaller Times New Roman.</p>
+  <div class="neon">Other centered neon text example</div>
 
   <footer>© 2025</footer>
 </body>
