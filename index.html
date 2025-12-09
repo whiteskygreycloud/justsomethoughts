@@ -11,51 +11,60 @@
   <link href="https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&display=swap" rel="stylesheet">
 
   <style>
+    /* Dark, dimmed gradient: plum → violet → indigo */
     body {
       margin: 0;
-      padding: 20px;
+      padding: 40px 20px;
       text-align: center;
-      background: linear-gradient(135deg, plum, violet, indigo);
-      background-blend-mode: multiply; /* dims the gradient */
       color: #fff;
+      background: linear-gradient(180deg, plum, violet, indigo);
+      background-attachment: fixed;
+    }
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.35); /* dim overlay */
+      pointer-events: none;
+      z-index: -1;
+    }
 
-      /* Cursor using your provided PNG, hotspot set at top-left */
-      cursor: url('https://i.ibb.co/MySp4LMC/4440-C5-E2-47-F8-4-B70-B136-8-C373-D2-F5332.png') 0 0, auto;
+    /* Cursor using your new tigercatccc.png image */
+    html, body {
+      cursor: url('https://i.ibb.co/4Zh1Xr8y/tigercatccc.png') 16 16, auto;
     }
 
     h1 {
       font-family: 'Gloria Hallelujah', cursive;
       font-size: 3em;
-      color: white;
-      text-shadow: 0 0 10px white, 0 0 20px violet, 0 0 30px indigo;
+      color: #ffffff;
+      text-shadow: 0 0 10px #fff, 0 0 20px violet, 0 0 30px indigo;
       margin-top: 0.5em;
     }
 
     p {
       font-family: "Times New Roman", serif;
-      font-size: 1.1em; /* smaller */
-      color: #f0f0f0; /* clear, no neon */
-      margin: 0.5em 0;
-    }
-
-    .neon {
-      font-size: 1.3em;
-      text-shadow: 0 0 10px #fff, 0 0 20px violet, 0 0 30px indigo;
+      font-size: 1.05em; /* smaller */
+      color: #eaeaea; /* plain, non-neon */
+      margin: 1em 0;
     }
 
     footer {
-      margin-top: 60px;
-      font-size: 1.4em; /* bigger */
+      position: fixed;
+      bottom: 12px;
+      left: 0;
+      right: 0;
+      text-align: center;
       font-family: Arial, sans-serif;
-      color: rgba(255, 0, 0, 0.8); /* dimmed red */
-      text-shadow: 0 0 10px red, 0 0 20px darkred;
+      font-size: 1.3em; /* bigger */
+      color: rgba(255, 0, 0, 0.85); /* dimmed neon red */
+      text-shadow: 0 0 10px #ff0000, 0 0 18px #8b0000;
     }
   </style>
 </head>
 <body>
-  <h1>Sketchbook Title</h1>
+  <h1>Just Some Thoughts</h1>
   <p>Main text goes here, smaller Times New Roman.</p>
-  <div class="neon">Other centered neon text example</div>
 
   <footer>© 2025</footer>
 </body>
